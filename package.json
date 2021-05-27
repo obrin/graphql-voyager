@@ -1,6 +1,7 @@
 {
   "name": "graphql-voyager",
   "version": "0.1.0",
+  "homepage": "https://obrin.github.io/graphql-voyager",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
