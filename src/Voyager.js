@@ -20,7 +20,6 @@ export default class Component extends React.Component {
   introspectionProvider(query) {
     return fetch('http://api.home.local/graphql', {
       method: 'post',
-      // mode: 'no-cors',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
