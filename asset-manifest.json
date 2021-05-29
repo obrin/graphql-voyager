@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/graphql-voyager/static/css/main.13e944a6.chunk.css",
-    "main.js": "/graphql-voyager/static/js/main.5bd43fe9.chunk.js",
-    "main.js.map": "/graphql-voyager/static/js/main.5bd43fe9.chunk.js.map",
+    "main.js": "/graphql-voyager/static/js/main.78002fd9.chunk.js",
+    "main.js.map": "/graphql-voyager/static/js/main.78002fd9.chunk.js.map",
     "runtime-main.js": "/graphql-voyager/static/js/runtime-main.15a5261d.js",
     "runtime-main.js.map": "/graphql-voyager/static/js/runtime-main.15a5261d.js.map",
     "static/js/2.fc78a0bf.chunk.js": "/graphql-voyager/static/js/2.fc78a0bf.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.15a5261d.js",
     "static/js/2.fc78a0bf.chunk.js",
     "static/css/main.13e944a6.chunk.css",
-    "static/js/main.5bd43fe9.chunk.js"
+    "static/js/main.78002fd9.chunk.js"
   ]
 }
