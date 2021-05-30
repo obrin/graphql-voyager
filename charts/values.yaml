@@ -83,12 +83,12 @@ vs:
     - match:
       - uri:
           prefix: /voyager
-      # - uri:
-      #     prefix: /static
+      - uri:
+          prefix: /static
       rewrite:
         uri: /
-      route:
-        - destination:
-            host: graphql-voyager
-            port:
-              number: 80
+    - route:
+      - destination:
+          host: graphql-voyager
+          port:
+            number: 80
