@@ -87,8 +87,8 @@ vs:
           prefix: /static
       rewrite:
         uri: /
-    - route:
-      - destination:
-          host: graphql-voyager
-          port:
-            number: 80
+      route:
+        - destination:
+            host: graphql-voyager
+            port:
+              number: 80
