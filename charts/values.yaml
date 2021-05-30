@@ -54,10 +54,17 @@ gateway:
 
 vs:
   hosts:
-    - 'voyager.home.local'
+    # - 'voyager.home.local'
+    - 'api.home.local'
   gateways:
-    - graphql-voyager
+    # - graphql-voyager
+    - apollo-federated-gateway
   http:
+    - match:
+      - uri:
+          prefix: /voyager
+      rewrite:
+        uri: /
     - route:
       - destination:
           host: graphql-voyager
