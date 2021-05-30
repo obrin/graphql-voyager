@@ -1,0 +1,10 @@
+steps:
+  - label: ':docker: Build & Push'
+    plugins:
+      - https://github.com/obrin/buildkite-container-plugin.git#v1.0.1:
+
+  - wait
+
+  - label: ':rocket: Deploy'
+    plugins:
+      - https://github.com/obrin/buildkite-deploy-plugin.git#v1.0.9:
