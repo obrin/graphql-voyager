@@ -83,8 +83,8 @@ vs:
     - match:
       - uri:
           prefix: /voyager
-      - uri:
-          prefix: /static
+      # - uri:
+      #     prefix: /static
       rewrite:
         uri: /
       route:
