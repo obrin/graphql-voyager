@@ -77,8 +77,8 @@ vs:
     # - 'voyager.home.local'
     - 'api.home.local'
   gateways:
-    # - graphql-voyager
-    - apollo-federated-gateway
+    - graphql-voyager
+    # - apollo-federated-gateway
   http:
     - match:
       - uri:
