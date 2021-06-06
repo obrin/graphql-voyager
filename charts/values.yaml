@@ -52,39 +52,15 @@ hpa:
 #       hosts:
 #       - "voyager.home.local"
 
-gateway:
-  selector:
-    istio: ingressgateway
-  servers:
-    - port:
-        number: 80
-        name: http
-        protocol: HTTP
-      hosts:
-        - 'api.home.local'
-    - port:
-        number: 443
-        name: https
-        protocol: HTTPS
-      tls:
-        mode: SIMPLE
-        credentialName: home-local-cert
-      hosts:
-      - "api.home.local"
-
 vs:
   hosts:
-    # - 'voyager.home.local'
-    - 'api.home.local'
+    - '*'
   gateways:
-    # - graphql-voyager
-    - apollo-federated-gateway
+    - apollo-federated-gateway/apollo-federated-gateway
   http:
     - match:
       - uri:
           prefix: /voyager
-      # - uri:
-      #     prefix: /static
       rewrite:
         uri: /
       route:
