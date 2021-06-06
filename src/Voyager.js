@@ -3,6 +3,7 @@ import { Voyager } from 'graphql-voyager'
 import fetch from 'isomorphic-fetch'
 
 const introspectionProvider = (query) => {
+  console.log('hello')
   return fetch('https://api.home.local/graphql', {
     method: 'post',
     headers: {

@@ -1,0 +1,65 @@
+mainDeployment:
+  replicaCount: 1
+  containers:
+    app:
+      pullPolicy: IfNotPresent
+      image:
+        repository: jordanyong/graphql-voyager
+      ports:
+        - name: http
+          containerPort: 8080
+      resources:
+        limits:
+          cpu: 150m
+          memory: 150Mi
+        requests:
+          cpu: 100m
+          memory: 100Mi
+
+service:
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - pods:
+        metricName: "pod_name:container_cpu_usage:ratio"
+        targetAverageValue: 0.6
+      type: "Pods"
+
+gateway:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "voyager.home.local"
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        credentialName: voyager-home-local-cert
+      hosts:
+        - "voyager.home.local"
+
+vs:
+  hosts:
+    - "*"
+  gateways:
+    - graphql-voyager
+  http:
+    - route:
+        - destination:
+            host: graphql-voyager
+            port:
+              number: 80
