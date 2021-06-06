@@ -56,25 +56,25 @@ vs:
   hosts:
     - '*'
   gateways:
-    - apollo-federated-gateway/apollo-federated-gateway
+    # - apollo-federated-gateway/apollo-federated-gateway
     - graphql-voyager
   http:
-    - match:
-      - uri:
-          prefix: /voyager
-      rewrite:
-        uri: /
-      route:
-        - destination:
-            host: graphql-voyager
-            port:
-              number: 80
     # - match:
     #   - uri:
     #       prefix: /voyager
+    #   rewrite:
+    #     uri: /
     #   route:
     #     - destination:
     #         host: graphql-voyager
     #         port:
     #           number: 80
+    # - match:
+    #   - uri:
+    #       prefix: /voyager
+      - route:
+        - destination:
+            host: graphql-voyager
+            port:
+              number: 80
 
