@@ -59,7 +59,7 @@ vs:
     - graphql-voyager
   http:
     - route:
-        - destination:
-            host: graphql-voyager
-            port:
-              number: 80
+      - destination:
+          host: graphql-voyager
+          port:
+            number: 80
