@@ -48,7 +48,7 @@ gateway:
         protocol: HTTPS
       tls:
         mode: SIMPLE
-        credentialName: home-local-cert
+        credentialName: voyager-home-local-cert
       hosts:
         - "voyager.home.local"
 
