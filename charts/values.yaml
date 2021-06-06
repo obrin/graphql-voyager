@@ -41,7 +41,7 @@ gateway:
         name: http
         protocol: HTTP
       hosts:
-        - 'voyager.home.local'
+        - "voyager.home.local"
     - port:
         number: 443
         name: https
@@ -50,31 +50,16 @@ gateway:
         mode: SIMPLE
         credentialName: home-local-cert
       hosts:
-      - "voyager.home.local"
+        - "voyager.home.local"
 
 vs:
   hosts:
-    - '*'
+    - "*"
   gateways:
-    # - apollo-federated-gateway/apollo-federated-gateway
     - graphql-voyager
   http:
-    # - match:
-    #   - uri:
-    #       prefix: /voyager
-    #   rewrite:
-    #     uri: /
-    #   route:
-    #     - destination:
-    #         host: graphql-voyager
-    #         port:
-    #           number: 80
-    # - match:
-    #   - uri:
-    #       prefix: /voyager
-      - route:
+    - route:
         - destination:
             host: graphql-voyager
             port:
               number: 80
-
