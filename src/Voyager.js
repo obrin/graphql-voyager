@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch'
 
 const introspectionProvider = (query) => {
   console.log('hello')
-  return fetch('api.home.local/graphql', {
+  return fetch('https://api.home.local/graphql', {
     method: 'post',
     headers: {
       Accept: 'application/json',
