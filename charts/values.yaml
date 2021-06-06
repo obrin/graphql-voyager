@@ -48,7 +48,7 @@ gateway:
         protocol: HTTPS
       tls:
         mode: SIMPLE
-        credentialName: home-local-cert
+        credentialName: voyager-home-local-cert
       hosts:
         - "voyager.home.local"
 
@@ -59,7 +59,7 @@ vs:
     - graphql-voyager
   http:
     - route:
-      - destination:
-          host: graphql-voyager
-          port:
-            number: 80
+        - destination:
+            host: graphql-voyager
+            port:
+              number: 80
