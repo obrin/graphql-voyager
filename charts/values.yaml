@@ -60,6 +60,6 @@ vs:
   http:
     - route:
       - destination:
-        host: graphql-voyager
-        port:
-          number: 80
+          host: graphql-voyager
+          port:
+            number: 80
